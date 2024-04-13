@@ -3,14 +3,14 @@ import App from "./app/App";
 import {BrowserRouter} from "react-router-dom";
 import {ThemeProvider} from "app/providers/ThemeProvider";
 
+import 'shared/config/i18next/i18next'
 
 
 render(
     <ThemeProvider>
         <BrowserRouter>
-            <App/>,
+            <App/>
         </BrowserRouter>
-    </ThemeProvider>
-    ,
+    </ThemeProvider>,
     document.getElementById("root")
 )

@@ -16,7 +16,6 @@ export function buildLoaders(options: IBuildOptions): webpack.RuleSetRule[] {
                 {
                     loader: "css-loader",
                     options: {
-                        esModule: false,
                         modules: {
                             auto: (resPath: string) => Boolean(resPath.includes('.module.')),
                             localIdentName: options.isDev
@@ -29,8 +28,24 @@ export function buildLoaders(options: IBuildOptions): webpack.RuleSetRule[] {
             ],
         }
 
+    const svgrLoader = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    }
+
+    const fileLoader = {
+            test: /\.(png|jpe?g|gif|woff|woff2)$/i,
+            use: [
+                {
+                    loader: 'file-loader',
+                },
+            ],
+        }
+
     return [
         typeScriptLoader,
         cssLoader,
+        svgrLoader,
+        fileLoader,
     ]
 }
