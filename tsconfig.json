@@ -20,9 +20,10 @@
     }
   },
   "include": [
-    "./src/**/*",
-    "./config/**/*",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./config/**/*.ts",
+    "./config/**/*.tsx",
     "./config/jest/setupTest.ts",
-    "./public/**/*",
   ]
 }

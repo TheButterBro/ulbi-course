@@ -7,6 +7,6 @@ interface ILoaderProps {
 
 export const Loader = ({ className }: ILoaderProps) => {
     return (
-        <div className={classNames(cls.Loader, {}, [className])} />
+        <div className={classNames(cls.Loader, {}, [className])}/>
     );
 };

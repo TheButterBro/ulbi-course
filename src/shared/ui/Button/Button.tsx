@@ -4,6 +4,7 @@ import {ButtonHTMLAttributes, FC} from "react";
 
 export enum ButtonTheme {
     INVISIBLE = 'invisible',
+    OUTLINE = 'outline',
 }
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
