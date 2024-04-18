@@ -7,18 +7,22 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"]
     },
-    
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
   },
-
+  "include": [
+    "./src/**/*",
+    "./config/**/*",
+    "./config/jest/setupTest.ts",
+    "./public/**/*",
+  ]
 }
