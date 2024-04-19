@@ -23,6 +23,13 @@ export const Invisible: Story = {
     },
 };
 
+export const InvisibleInverted: Story = {
+    args: {
+        children: "Example",
+        theme: ButtonTheme.INVISIBLE_INVERTED,
+    },
+};
+
 export const Outline: Story = {
     args: {
         children: "Example",

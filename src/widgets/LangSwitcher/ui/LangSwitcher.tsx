@@ -16,7 +16,7 @@ export const LangSwitcher = ({ className, isShort = false }: ILangSwitcherProps)
     }
 
     return (
-        <Button onClick={langToggle} theme={ButtonTheme.INVISIBLE} className={classNames(cls.LangSwitcher, {}, [className])}>
+        <Button onClick={langToggle} theme={ButtonTheme.INVISIBLE_INVERTED} className={classNames(cls.LangSwitcher, {}, [className])}>
             {t(isShort ? 'Короткий язык' : 'Язык')}
         </Button>
     );

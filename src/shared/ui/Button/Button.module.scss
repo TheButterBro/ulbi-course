@@ -1,9 +1,10 @@
 .Button {
   cursor: pointer;
   padding: 7px 15px;
+  color: var(--primary-color);
 }
 
-.invisible {
+.invisible, .invertedInvisible {
   padding: 0;
   border: none;
   background: none;
@@ -11,6 +12,9 @@
 
   display: flex;
   align-items: center;
+}
+.invertedInvisible {
+  color: var(--inverted-primary-color);
 }
 
 .outline {
