@@ -5,5 +5,7 @@
   "Страница не найдена": "Page not found",
   "Что-то пошло не так": "Something went wrong",
   "Короткий язык": "En",
-  "Вход": "Вход"
+  "Вход": "Login",
+  "Введите имя": "Enter username",
+  "Введите пароль": "Enter password"
 }
