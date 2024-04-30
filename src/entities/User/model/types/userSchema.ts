@@ -1,7 +1,8 @@
 export interface UserSchema {
-
+    authData: User,
 }
 
 export interface User {
-    isAuth: UserSchema,
+    id: number,
+    username: string,
 }

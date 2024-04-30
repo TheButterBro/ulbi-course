@@ -7,7 +7,6 @@ function AboutPage() {
     return (
         <>
             <div>{t('О нас')}</div>
-            <Counter/>
         </>
     );
 }

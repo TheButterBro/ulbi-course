@@ -1,0 +1,23 @@
+.Text {
+  margin: 0;
+}
+
+.title {
+  font: var(--font-l);
+  color: var(--primary-color);
+}
+
+.text {
+  color: var(--secondary-color);
+}
+
+.red {
+  .title {
+    font: var(--font-l);
+    color: var(--color-red-primary);
+  }
+
+  .text {
+    color: var(--color-red-secondary);
+  }
+}
