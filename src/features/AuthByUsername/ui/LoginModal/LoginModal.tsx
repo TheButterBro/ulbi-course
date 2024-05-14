@@ -1,5 +1,5 @@
 import {Modal} from "shared/ui/Modal/Modal";
-import {LoginForm} from "../LoginForm/LoginForm";
+import {LoginFormAsync} from "features/AuthByUsername/ui/LoginForm/LoginForm.async";
 
 interface ILoginModalProps {
     isOpen: boolean,
@@ -14,7 +14,7 @@ export const LoginModal = (props: ILoginModalProps) => {
 
     return (
         <Modal lazy={true} isOpen={isOpen} onClose={onClose}>
-            <LoginForm />
+            <LoginFormAsync />
         </Modal>
     );
 };

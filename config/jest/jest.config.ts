@@ -31,6 +31,7 @@ export default {
   ],
   setupFilesAfterEnv: ["<rootDir>config/jest/setupTest.ts"],
   moduleNameMapper: {
+    '^axios$': require.resolve('axios'),
     '\\.(jpg|jpeg|png|gif|webp)$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, "jestEmptyComponent.tsx"),
     '\\.(css|scss)$': '<rootDir>config/jest/identity-obj-proxy-esm.ts',
