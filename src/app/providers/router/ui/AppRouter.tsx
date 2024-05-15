@@ -4,9 +4,6 @@ import {routeConfig} from "shared/config/routeConfig/routeConfig";
 import {classNames} from "shared/lib/classNames/classNames";
 import {LoaderPage} from "widgets/LoaderPage";
 
-
-
-
 const AppRouter = () => {
     return (
         <Routes>

@@ -1,26 +1,20 @@
 import {classNames} from "shared/lib/classNames/classNames";
-import {useState} from "react";
+import {memo, useState} from "react";
 import {ThemeSwitcher} from "widgets/ThemeSwitcher";
 import {Button, ButtonSize, ButtonTheme} from "shared/ui/Button/Button";
 import {LangSwitcher} from "widgets/LangSwitcher";
-import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
-import {useTranslation} from "react-i18next";
-import {RoutePaths} from "shared/config/routeConfig/routeConfig";
 import * as cls from './Sidebar.module.scss'
-import MainIcon from 'shared/assets/icons/nav-main-icon.svg'
-import AboutIcon from 'shared/assets/icons/nav-about-icon.svg'
-
+import {SidebarItemsList} from "../../model/items";
+import {SidebarItem} from "../SidebarItem/SidebarItem";
 
 interface ISidebarProps {
     className?: string
 }
 
-export const Sidebar = ({ className }: ISidebarProps) => {
+export const Sidebar = memo(({ className }: ISidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
 
     const onToggle = () => setCollapsed(prev => !prev);
-
-    const {t} = useTranslation();
 
     return (
         <div data-testid="sidebar" className={classNames(cls.Sidebar, {[cls.collapsed]: collapsed}, [className])}>
@@ -35,22 +29,9 @@ export const Sidebar = ({ className }: ISidebarProps) => {
                 {collapsed ? ">" : "<"}
             </Button>
             <div className={cls.links}>
-                <AppLink
-                    className={cls.link}
-                    theme={AppLinkTheme.INVERTED}
-                    to={RoutePaths.main}
-                >
-                    <MainIcon className={cls.icon} />
-                    <span className={cls.text}>{t('Главная')}</span>
-                </AppLink>
-                <AppLink
-                    className={cls.link}
-                    theme={AppLinkTheme.INVERTED}
-                    to={RoutePaths.about}
-                >
-                    <AboutIcon className={cls.icon} />
-                    <span className={cls.text}>{t('О нас')}</span>
-                </AppLink>
+                {SidebarItemsList.map((item)=>(
+                    <SidebarItem item={item} collapsed={collapsed} />
+                ))}
             </div>
             <div className={classNames(cls.switchers)}>
                 <ThemeSwitcher/>
@@ -58,4 +39,4 @@ export const Sidebar = ({ className }: ISidebarProps) => {
             </div>
         </div>
     );
-};
+});

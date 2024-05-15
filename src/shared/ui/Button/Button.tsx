@@ -1,6 +1,6 @@
 import {classNames} from "shared/lib/classNames/classNames";
 import * as cls from './Button.module.scss';
-import {ButtonHTMLAttributes, FC} from "react";
+import {ButtonHTMLAttributes, memo} from "react";
 
 export enum ButtonTheme {
     INVISIBLE = 'invisible',
@@ -23,7 +23,7 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     disabled?: boolean
 }
 
-export const Button: FC<IButtonProps> = (props) => {
+export const Button = memo((props: IButtonProps) => {
     const {
         className,
         theme,
@@ -43,4 +43,4 @@ export const Button: FC<IButtonProps> = (props) => {
             {children}
         </button>
     );
-};
+});

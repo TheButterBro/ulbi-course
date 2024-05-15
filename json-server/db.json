@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "firstname": "Максим",
+    "lastname": "Лянка",
+    "age": 25,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Ulyanovsk",
+    "username": "admin",
+    "avatar": "https://w7.pngwing.com/pngs/802/825/png-transparent-redbubble-polite-cat-meme-funny-cat-meme-thumbnail.png"
+  }
 }

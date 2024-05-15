@@ -37,40 +37,15 @@
   flex-direction: column;
 }
 
-.link {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  width: fit-content;
-}
-
-.icon {
-  fill: var(--inverted-primary-color);
-  min-width: 20px;
-  min-height: 20px;
-}
-
-.text {
-  margin-left: 5px;
-  white-space: nowrap;
-  transition: opacity 0.2s;
-}
-
 .collapsed {
   width: var(--sidebar-width-collapsed);
-
-  .switchers {
-    flex-direction: column;
-    align-items: center;
-  }
 
   .lang {
     margin-left: 0;
   }
 
-  .text {
-    opacity: 0;
-    width: 0;
-    pointer-events: none;
+  .switchers {
+    flex-direction: column;
+    align-items: center;
   }
 }
